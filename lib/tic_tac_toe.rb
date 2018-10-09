@@ -79,6 +79,25 @@ class TicTacToe
     display_board
   end
 
+  def won?
+    WIN_COMBINATIONS.each do |win|
+      if @board[win[0]] == "X" && @board[win[1]] == "X" && @board[win[2]] == "X"
+        return win
+      elsif @board[win[0]] == "O" && @board[win[1]] == "O" && @board[win[2]] == "O"
+        return win
+      end
+    end
+    i = 1
+    for empty_board in board
+      if position_taken?(i)
+      return false
+       i += 1
+      end
+    end
+    if !full?
+      return false
+    end
+  end
 
   def full?
     i = 0
