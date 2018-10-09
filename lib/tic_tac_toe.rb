@@ -79,4 +79,18 @@ class TicTacToe
     display_board
   end
 
+
+  def full?
+    i = 0
+    until i == @board.length
+      if position_taken?(i)
+        full_board = true
+      else
+        return false
+      end
+      i += 1
+    end
+    return full_board
+  end
+
 end
