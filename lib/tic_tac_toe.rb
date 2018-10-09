@@ -88,7 +88,7 @@ class TicTacToe
       end
     end
     i = 1
-    for empty_board in board
+    for empty_board in @board
       if position_taken?(i)
       return false
        i += 1
