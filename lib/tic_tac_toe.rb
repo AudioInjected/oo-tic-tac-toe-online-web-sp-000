@@ -66,7 +66,7 @@ class TicTacToe
     puts "Please enter 1-9:"
     input = gets
     index = input_to_index(input)
-    if valid_move?(, index)
+    if valid_move?(index)
       move(@board, index, current_player(@board))
     elsif !valid_move?(@board, index)
     until valid_move?(@board, index)
